@@ -18,7 +18,7 @@
                     <a class="nav-link" href="{{ route('companies.index') }}">Companies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{ route('onboarding.index') }}">Onboarding</a>
                 </li>
             </ul>
         </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\OnboardingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,4 @@ Route::get('/', function () {
 
 Route::get('companies', [CompanyController::class, 'index'])->name('companies.index');
 Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index');
+Route::get('onboarding', [OnboardingController::class, 'index'])->name('onboarding.index');
