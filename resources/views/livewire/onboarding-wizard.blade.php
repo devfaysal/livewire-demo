@@ -3,26 +3,26 @@
         <div class="sidebar p-5">
             <div class="step {{ $currentStep > 1 ? 'success' : 'active' }}">
                 <div>
-                    <h5>General Information</h5>
-                    <p>Profile Details</p>
+                    <h5>Language</h5>
+                    <p>Language Information</p>
                 </div>
             </div>
             <div class="step {{ $currentStep > 2 ? 'success' : '' }} {{ $currentStep == 2 ? 'active' : '' }}">
                 <div>
-                    <h5>Field of Expertise</h5>
-                    <p>Expertise Area</p>
+                    <h5>Name</h5>
+                    <p>Full Name</p>
                 </div>
             </div>
             <div class="step {{ $currentStep > 3 ? 'success' : '' }} {{ $currentStep == 3 ? 'active' : '' }}">
                 <div>
-                    <h5>Education</h5>
-                    <p>Education details</p>
+                    <h5>Email</h5>
+                    <p>Business Email</p>
                 </div>
             </div>
             <div class="step {{ $currentStep > 4 ? 'success' : '' }} {{ $currentStep == 4 ? 'active' : '' }}">
                 <div>
-                    <h5>Consultation</h5>
-                    <p>Type of Consultation</p>
+                    <h5>Phone</h5>
+                    <p>Phone Number</p>
                 </div>
             </div>
             <div class="step {{ $currentStep > 5 ? 'success' : '' }} {{ $currentStep == 5 ? 'active' : '' }}">
@@ -42,12 +42,7 @@
     <div class="col-8">
         <div class="step1 {{ $currentStep != 1 ? 'd-none' : '' }}">
             <div class="pb-4">
-                <h5>Tell us about your expertise</h5>
-                <p>This helps in finding the right project for you</p>
-            </div>
-            <div class="pb-4">
                 <h5>What languages do you speak?</h5>
-                <p>We will use this to help match you with clients who are fluent in their language</p>
                 <div class="mb-3">
                     <input wire:model="language" type="text" class="form-control py-3" placeholder="eg. English">
                 </div>
