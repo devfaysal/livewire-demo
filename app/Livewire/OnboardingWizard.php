@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Illuminate\Support\Arr;
 use Livewire\Component;
 
 class OnboardingWizard extends Component
@@ -13,6 +14,33 @@ class OnboardingWizard extends Component
     public string $phone = '+8801712345678';
     public string $biography = 'Lorem Ipsum Dolor sit amet';
     public string $image;
+    public array $skills = [
+        'PHP',
+        'Python',
+        'Java',
+        'C++',
+        'HTML',
+        'CSS',
+        'Laravel',
+        'Livewire',
+        'Filament',
+        'Ajax',
+        'Bootstrap',
+        'Tailwind',
+    ];
+    public array $selectedSkills = [];
+
+    public function selectSkill($skill)
+    {
+        $this->selectedSkills[] = $skill;
+        $this->skills = array_diff($this->skills, [$skill]);
+    }
+
+    public function deSelectSkill($skill)
+    {
+        $this->skills[] = $skill;
+        $this->selectedSkills = array_diff($this->selectedSkills, [$skill]);
+    }
 
     public function firstStepSubmit()
     {

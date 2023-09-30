@@ -46,6 +46,24 @@
                 <div class="mb-3">
                     <input wire:model="language" type="text" class="form-control py-3" placeholder="eg. English">
                 </div>
+                <div class="mb-3">
+                    <div class="d-flex h-50">
+                        <div class="p-3 w-25 overflow-auto h-100 border">
+                            @foreach ($skills as $skill)
+                                <ul>
+                                    <li wire:click="selectSkill('{{ $skill }}')">{{ $skill }}</li>
+                                </ul>
+                            @endforeach
+                        </div>
+                        <div class="p-3 w-25 overflow-auto h-100 border">
+                            @foreach ($selectedSkills as $skill)
+                                <ul>
+                                    <li wire:click="deSelectSkill('{{ $skill }}')">{{ $skill }}</li>
+                                </ul>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr class="pb-4">
             <div class="d-flex justify-content-between">
