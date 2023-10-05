@@ -1,6 +1,4 @@
-@extends('layouts.app')
- 
-@section('content')
+<x-bootstrap-layout>
     <h1 class="pb-2">Companies</h1>
     <livewire:create-company />
-@endsection
+</x-bootstrap-layout>

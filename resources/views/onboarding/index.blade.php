@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<x-bootstrap-layout>
  <style>
         .step{
             display: flex;
@@ -55,7 +55,6 @@
             box-shadow: rgba(0, 0, 0, 0.15) 8px 4px 16px 0px;
         }
     </style>
-@section('content')
     <h1 class="pb-2">Onboarding Wizard</h1>
     <livewire:onboarding-wizard />
-@endsection
+</x-bootstrap-layout>

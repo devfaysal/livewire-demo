@@ -1,6 +1,4 @@
-@extends('layouts.app')
- 
-@section('content')
+<x-app-layout>
     <h1>Livewire Demo</h1>
     @livewire('hello-world')
-@endsection
+</x-app-layout>

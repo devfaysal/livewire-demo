@@ -1,29 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    @livewireStyles
-  </head>
-  <body>
-    <div class="container">
-        <div class="mb-4">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('contacts.index') }}">Contacts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('companies.index') }}">Companies</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('onboarding.index') }}">Onboarding</a>
-                </li>
-            </ul>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>{{ config('app.name', 'Laravel') }}</title>
+        <!-- Scripts -->
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        @livewireStyles
+    </head>
+    <body>
+        <div class="bg-body-tertiary vh-100">
+            @include('layouts.navigation')
+
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="bg-white shadow-sm">
+                    <div style="max-width: 1280px; margin:auto;" class="py-3 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
+
+            <!-- Page Content -->
+            <main class="d-flex justify-content-center">
+                {{ $slot }}
+            </main>
         </div>
-        @yield('content')
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    @livewireScripts
-  </body>
+        @livewireScripts
+    </body>
+</html>
