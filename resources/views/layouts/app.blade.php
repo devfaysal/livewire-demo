@@ -16,14 +16,14 @@
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow-sm">
-                    <div style="max-width: 1280px; margin:auto;" class="py-3 px-4 sm:px-6 lg:px-8">
+                    <div class="container py-3">
                         {{ $header }}
                     </div>
                 </header>
             @endif
 
             <!-- Page Content -->
-            <main class="d-flex justify-content-center">
+            <main class="container">
                 {{ $slot }}
             </main>
         </div>

@@ -6,3 +6,19 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+.hover-bg-body-tertiary:hover{
+    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important
+}
+.hover-border-body-tertiary{
+    border-color: #fff!important;
+}
+.hover-border-body-tertiary:hover{
+    border-color: #ccc!important;
+}
+.n-m-12{
+    @media (max-width: 575.98px) {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}

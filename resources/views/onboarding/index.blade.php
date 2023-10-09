@@ -1,4 +1,4 @@
-<x-bootstrap-layout>
+<x-app-layout>
  <style>
         .step{
             display: flex;
@@ -57,4 +57,4 @@
     </style>
     <h1 class="pb-2">Onboarding Wizard</h1>
     <livewire:onboarding-wizard />
-</x-bootstrap-layout>
+</x-app-layout>
