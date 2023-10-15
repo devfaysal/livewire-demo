@@ -9,14 +9,14 @@
         @livewireStyles
     </head>
     <body>
-        <div class="vh-100 d-flex flex-column justify-content-center align-items-center bg-body-tertiary">
+        <div class="vh-100 px-3 d-flex flex-column justify-content-center align-items-center bg-body-tertiary">
             <div>
                 <a href="/">
                     <x-application-logo style="width:80px; height:80px;" class="fill-current text-gray-500" />
                 </a>
             </div>
 
-            <div class="card border-0 bg-white shadow-sm mt-4 px-2 py-1" style="width: 28rem;">
+            <div class="w-100 card border-0 bg-white shadow-sm mt-4 px-2 py-1" style="max-width: 26rem;">
                 <div class="card-body">
                     {{ $slot }}
                 </div>

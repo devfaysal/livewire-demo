@@ -1,10 +1,10 @@
-<section class="space-y-6">
+<section>
     <header>
-        <h2 class="text-lg font-medium text-body">
+        <h2 class="fs-4 fw-medium text-body">
             {{ __('Delete Account') }}
         </h2>
 
-        <p class="mt-1 text-sm text-secondary">
+        <p class="mt-1 fs-6 text-secondary">
             {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
         </p>
     </header>
@@ -26,16 +26,7 @@
 
             <div class="mt-6">
                 <x-input-label for="password" value="{{ __('Password') }}" class="visually-hidden" />
-
-                <x-text-input
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="mt-1"
-                    required
-                    placeholder="{{ __('Password') }}"
-                />
-
+                <x-text-input id="password" name="password" type="password" required placeholder="{{ __('Password') }}"/>
                 <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
 
